@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30114.105
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bunnings", "Bunnings\Bunnings.csproj", "{494141EF-A339-49AE-B9C9-C9FDBFA5548B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bunnings.Tests", "Bunnings.Tests\Bunnings.Tests.csproj", "{F5EF7852-D594-4FE3-B535-01819EE0C60D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{494141EF-A339-49AE-B9C9-C9FDBFA5548B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{494141EF-A339-49AE-B9C9-C9FDBFA5548B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{494141EF-A339-49AE-B9C9-C9FDBFA5548B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{494141EF-A339-49AE-B9C9-C9FDBFA5548B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F5EF7852-D594-4FE3-B535-01819EE0C60D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F5EF7852-D594-4FE3-B535-01819EE0C60D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F5EF7852-D594-4FE3-B535-01819EE0C60D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F5EF7852-D594-4FE3-B535-01819EE0C60D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {46AFB469-5F5B-430D-89E7-DFCC2907D7B5}
+	EndGlobalSection
+EndGlobal
