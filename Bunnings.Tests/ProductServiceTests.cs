@@ -15,7 +15,7 @@ namespace Bunnings.Tests
         [InlineData(0, 0, 0, -1, "", false, "Price range must be positive", false)]
         [InlineData(0, 0, 0, 0, "", false, "Search must not be empty", false)]
         [InlineData(0, 0, 0, 0, "insulation", true, "", true)]
-        public void ValidateQuery(int brandId, int productId, int minPrice, int maxPrice, string query,
+        public async Task ValidateQuery(int brandId, int productId, int minPrice, int maxPrice, string query,
             bool expectedResult, string expectedValidationMessage, bool anyResults)
         {
             // Arrange
@@ -30,7 +30,7 @@ namespace Bunnings.Tests
             var productService = new ProductService();
 
             // Act
-            var (actualResult, actualValidationMessage, results) = productService.GetProductsByQuery(productQuery);
+            var (actualResult, actualValidationMessage, results) = await productService.GetProductsByQueryAsync(productQuery);
 
             // Assert
             Assert.Equal(expectedResult, actualResult);

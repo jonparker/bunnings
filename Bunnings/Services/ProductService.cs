@@ -56,11 +56,11 @@ namespace Bunnings.Services
                 )
             );
 
-        public (bool result, string message, IEnumerable<Product>) GetProductsByQuery(ProductQuery query)
+        public Task<(bool result, string message, IEnumerable<Product>?)> GetProductsByQueryAsync(ProductQuery query)
         {
             var (result, message) = ValidateQuery(query);
-            return result ?
-            (true, "", from p in _allProducts
+            var queryResult = result ?
+            (true, "", (IEnumerable<Product>?)(from p in _allProducts
                 where (!query.BrandId.HasValue || p.Brand.Id == query.BrandId) &&
                       (!query.MinPrice.HasValue || !query.MaxPrice.HasValue ||
                        (p.Price < query.MaxPrice && p.Price > query.MinPrice)) &&
@@ -68,7 +68,9 @@ namespace Bunnings.Services
                       (string.IsNullOrWhiteSpace(query.Search) ||
                        p.Name.Contains(query.Search, StringComparison.CurrentCultureIgnoreCase) ||
                        p.Description.Contains(query.Search, StringComparison.CurrentCultureIgnoreCase))
-                   select p) : (false, message, null);
+                   select p)) : (false, message, (IEnumerable<Product>?)null);
+
+            return Task.FromResult(queryResult);
         }
     }
 }

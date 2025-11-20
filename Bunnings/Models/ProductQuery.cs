@@ -9,7 +9,7 @@ namespace Bunnings.Models
     {
         public int? BrandId { get; set; }
         public int? ProductId { get; set; }
-        public string Search { get; set; }
+        public string? Search { get; set; }
         public int? MinPrice { get; set; }
         public int? MaxPrice { get; set; }
     }
