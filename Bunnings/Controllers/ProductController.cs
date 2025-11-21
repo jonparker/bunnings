@@ -26,13 +26,13 @@ namespace Bunnings.Controllers
         [HttpGet]
         public async Task<IActionResult> GetByQuery([FromQuery]ProductQuery query)
         {
-            var (isValid, validationMessage, results) = _productService.GetProductsByQuery(query);
+            var (isValid, validationMessage, results) = await _productService.GetProductsByQueryAsync(query);
             if (!isValid)
             {
-                _logger.LogInformation($"(Get) validation error: ${validationMessage}");
+                _logger.LogInformation("(Get) validation error: {ValidationMessage}", validationMessage);
                 return BadRequest(validationMessage);
             }
-            
+
             return Ok(results);
         }
     }
