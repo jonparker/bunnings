@@ -1,0 +1,36 @@
+version: 6.0.0-alpha.20
+installation_date: 2025-12-24
+
+# Core Configuration
+user_name: Developer
+communication_language: English
+document_output_language: English
+output_folder: _bmad-output
+project_root: /home/user/bunnings
+
+# Project Information
+project_name: Bunnings
+project_type: dotnet
+
+# Output Folders
+planning_artifacts_folder: _bmad-output/planning-artifacts
+implementation_artifacts_folder: _bmad-output/implementation-artifacts
+docs_folder: docs
+
+# Installed Modules
+modules:
+  bmm:
+    enabled: true
+    name: "BMM: BMad Method Agile-AI Driven-Development"
+    project_name: Bunnings
+    user_skill_level: intermediate
+  bmb:
+    enabled: true
+    name: "BMB: BMad Builder - Agent, Workflow and Module Builder"
+    bmb_creations_output_folder: _bmad-output/bmb-creations
+  cis:
+    enabled: true
+    name: "CIS: Creative Innovation Suite"
+  bmgd:
+    enabled: false
+    name: "BMGD: BMad Game Development"
