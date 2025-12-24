@@ -246,3 +246,11 @@ _Pvt_Extensions
 # Serverless directories
 .serverless
 /test/data/output/*
+
+# BMAD V6 - AI Development Framework
+# Keep the core framework tracked
+!_bmad/
+# But ignore local configurations and temporary files
+_bmad/_config/config.local.yaml
+_bmad-output/
+.bmad-temp/
