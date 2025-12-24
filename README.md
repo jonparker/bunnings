@@ -114,7 +114,7 @@ The API includes sample products from two brands:
    - Wall basket ($12.98)
    - Coco roll basket liner ($17.98)
 
-2. **EARTHWOOl** (BrandId: 1)
+2. **EARTHWOOL** (BrandId: 1)
    - Earthwool R-4.0 ($71.50)
    - Earthwool Space Blanket R-1.8 ($80.00)
 
